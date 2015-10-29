@@ -1,3 +1,3 @@
 轻量知乎日报-开发ing
 
-![效果图](/docs/demo.jpeg)
+![效果图](/docs/demo2.jpg)

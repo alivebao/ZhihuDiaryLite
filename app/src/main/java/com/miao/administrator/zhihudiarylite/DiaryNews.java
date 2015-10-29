@@ -1,37 +1,33 @@
 package com.miao.administrator.zhihudiarylite;
 
+import android.graphics.Bitmap;
+
 /**
  * Created by Administrator on 2015/10/28.
  */
 public class DiaryNews {
     private static final long serialVersionUID = 1;
     private String mTitle;
-    private String mUrlImg;
     private String mUrlData;
 
     public DiaryNews() {
 
     }
 
-    public DiaryNews(String Title, String UrlImg, String UrlData) {
+    public DiaryNews(String Title, String UrlData) {
         mTitle = Title;
-        mUrlImg = UrlImg;
-        mUrlImg = UrlData;
+        mUrlData = UrlData;
     }
 
     public DiaryNews(DiaryNews d) {
         mTitle = d.getmTitle();
         mUrlData = d.getmUrlData();
-        mUrlImg = d.getmUrlImg();
     }
 
     public String getmTitle() {
         return mTitle;
     }
 
-    public String getmUrlImg() {
-        return mUrlImg;
-    }
 
     public String getmUrlData() {
         return mUrlData;
@@ -45,7 +41,4 @@ public class DiaryNews {
         mUrlData = str;
     }
 
-    public void setmUrlData(String str) {
-        mUrlImg = str;
-    }
 }
