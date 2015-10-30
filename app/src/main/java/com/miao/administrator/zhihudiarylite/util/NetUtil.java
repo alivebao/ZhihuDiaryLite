@@ -1,8 +1,14 @@
-package com.miao.administrator.zhihudiarylite;
+package com.miao.administrator.zhihudiarylite.util;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.util.Log;
+import android.widget.Toast;
+
+import com.miao.administrator.zhihudiarylite.R;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -16,6 +22,18 @@ import java.net.URL;
  */
 public class NetUtil {
     public static final String CHARSET = "UTF-8";
+
+    public static boolean isNetworkConnected(Context context) {
+        if (context != null) {
+            ConnectivityManager mConnectivityManager = (ConnectivityManager) context
+                    .getSystemService(Context.CONNECTIVITY_SERVICE);
+            NetworkInfo mNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
+            if (mNetworkInfo != null) {
+                return mNetworkInfo.isAvailable();
+            }
+        }
+        return false;
+    }
 
     public static String get(String baseUrl, String suffix) throws IOException {
         return get(baseUrl + suffix);

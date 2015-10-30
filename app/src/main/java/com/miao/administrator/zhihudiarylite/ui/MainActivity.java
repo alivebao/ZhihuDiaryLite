@@ -1,4 +1,4 @@
-package com.miao.administrator.zhihudiarylite;
+package com.miao.administrator.zhihudiarylite.ui;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -9,6 +9,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import com.miao.administrator.zhihudiarylite.R;
+import com.miao.administrator.zhihudiarylite.util.NetUtil;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -36,6 +40,11 @@ public class MainActivity extends AppCompatActivity {
         MyPagerAdapter adapter = new MyPagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(adapter);
         mTabLayout.setupWithViewPager(mViewPager);
+
+        if (NetUtil.isNetworkConnected(this) == false) {
+            Toast.makeText(this, getString(R.string.no_network_warning), Toast.LENGTH_SHORT).show();
+            return;
+        }
     }
 
     private class MyPagerAdapter extends FragmentStatePagerAdapter {
@@ -53,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
             String strDate = (new SimpleDateFormat("yyyyMMdd", Locale.US)).format(dateToGetUrl.getTime());
 
             bundle.putString("date", strDate);
+            bundle.putBoolean("bFirst",true);
             fragment.setArguments(bundle);
             return fragment;
         }

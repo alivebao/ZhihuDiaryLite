@@ -1,4 +1,4 @@
-package com.miao.administrator.zhihudiarylite;
+package com.miao.administrator.zhihudiarylite.util;
 
 /**
  * Created by Administrator on 2015/10/28.

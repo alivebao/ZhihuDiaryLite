@@ -11,8 +11,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_height="1dp"
+        >
 
         <TextView
             android:id="@+id/tvContent"
@@ -32,9 +32,32 @@
             android:layout_height="fill_parent" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnTest"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="test" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnTest1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="test1" />
+
+        <Button
+            android:id="@+id/btnTest2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:text="test2" />
+
+        <Button
+            android:id="@+id/btnTest3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="test3" />
+    </LinearLayout>
+
 </LinearLayout>

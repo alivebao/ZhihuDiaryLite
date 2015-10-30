@@ -1,14 +1,15 @@
-package com.miao.administrator.zhihudiarylite;
+package com.miao.administrator.zhihudiarylite.adapter;
 
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.miao.administrator.zhihudiarylite.bean.DiaryNews;
+import com.miao.administrator.zhihudiarylite.R;
 
 import java.util.List;
 

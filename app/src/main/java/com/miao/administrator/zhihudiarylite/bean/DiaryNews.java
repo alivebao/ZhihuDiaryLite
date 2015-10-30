@@ -1,6 +1,4 @@
-package com.miao.administrator.zhihudiarylite;
-
-import android.graphics.Bitmap;
+package com.miao.administrator.zhihudiarylite.bean;
 
 /**
  * Created by Administrator on 2015/10/28.

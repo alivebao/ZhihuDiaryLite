@@ -1,9 +1,12 @@
 <resources>
-    <string name="app_name">ZhihuDiaryLite</string>
+    <string name="app_name">知乎日报·简</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_more_discuss">MoreDiscussActivity</string>
+    <string name="no_network_warning">无网络，请连接网络后下拉刷新</string>
+    <string name="refresh_finish">刷新完成</string>
 </resources>
