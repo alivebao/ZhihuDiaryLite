@@ -9,4 +9,5 @@
     <string name="title_activity_more_discuss">MoreDiscussActivity</string>
     <string name="no_network_warning">无网络，请连接网络后下拉刷新</string>
     <string name="refresh_finish">刷新完成</string>
+    <string name="title_activity_pick_date">PickDateActivity</string>
 </resources>

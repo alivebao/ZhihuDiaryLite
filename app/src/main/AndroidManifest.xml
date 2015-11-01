@@ -24,6 +24,10 @@
             android:name=".ui.MoreDiscussActivity"
             android:label="@string/title_activity_more_discuss" >
         </activity>
+        <activity
+            android:name=".ui.PickDateActivity"
+            android:label="@string/title_activity_pick_date" >
+        </activity>
     </application>
 
 </manifest>
