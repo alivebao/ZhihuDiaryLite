@@ -1,4 +1,4 @@
-package com.miao.administrator.diarycontentresolver;
+package com.miao.administrator.dbtest;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

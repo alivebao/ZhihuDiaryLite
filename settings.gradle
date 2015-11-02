@@ -1,1 +1,1 @@
-include ':app', ':diarycontentresolver'
+include ':app', ':dbtest'
