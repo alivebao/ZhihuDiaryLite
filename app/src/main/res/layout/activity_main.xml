@@ -10,9 +10,11 @@
         android:id="@+id/date_tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#87CEEB"
         app:tabMode="scrollable" />
 
     <FrameLayout
+        android:background="#EEEEEE"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -24,6 +26,7 @@
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab_pick_date"
+            android:layout_gravity="bottom|right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/zhihu" />

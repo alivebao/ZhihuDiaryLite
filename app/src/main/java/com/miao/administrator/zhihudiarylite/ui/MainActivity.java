@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, getString(R.string.no_network_warning), Toast.LENGTH_SHORT).show();
             return;
         }
-
     }
 
     private class MyPagerAdapter extends FragmentStatePagerAdapter {

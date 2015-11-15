@@ -18,7 +18,7 @@ public class StringUtil {
             JSONObject newsDetail = new JSONObject(strContent);
             if (newsDetail.has("body")) {
                 Document doc = Jsoup.parse(newsDetail.getString("body"));
-                setHTMLBlack(doc);
+//                setHTMLBlack(doc);
                 setPictureFitScreen(doc);
                 strResult = doc.toString();
             }

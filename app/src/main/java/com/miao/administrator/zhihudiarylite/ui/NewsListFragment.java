@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -123,7 +124,11 @@ public class NewsListFragment extends Fragment implements SwipeRefreshLayout.OnR
                         JSONObject singleNews = newsArray.getJSONObject(i);
                         String title = singleNews.getString("title");
                         String contentURL = URLUtil.ZHIHU_DAILY_OFFLINE_NEWS + singleNews.getInt("id");
-                        list.add(new DiaryNews(title, contentURL));
+
+                        String imageURL = singleNews.getString("images");
+                        imageURL = imageURL.substring(2,imageURL.length() - 2);
+                        imageURL = imageURL.replace("\\/","/");
+                        list.add(new DiaryNews(title, contentURL,imageURL));
                     }
                     mHandler.sendEmptyMessage(0x01);
                 } catch (Exception e) {

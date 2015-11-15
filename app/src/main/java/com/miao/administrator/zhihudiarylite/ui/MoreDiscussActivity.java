@@ -20,7 +20,7 @@ public class MoreDiscussActivity extends AppCompatActivity {
 
         String strURL = getIntent().getStringExtra("HTML");
         webViewDiscuss = (WebView) findViewById(R.id.webviewDiscuss);
-        webViewDiscuss.setBackgroundColor(0x00000000);
+//        webViewDiscuss.setBackgroundColor(0x00000000);
         if (strURL != null && !strURL.equals(""))
             webViewDiscuss.loadData(strURL, "text/html;charset=UTF-8", null);
         else

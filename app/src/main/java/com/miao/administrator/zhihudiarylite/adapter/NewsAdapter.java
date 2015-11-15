@@ -1,16 +1,22 @@
 package com.miao.administrator.zhihudiarylite.adapter;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.miao.administrator.zhihudiarylite.bean.DiaryNews;
 import com.miao.administrator.zhihudiarylite.R;
 
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.List;
 
 /**
@@ -63,17 +69,20 @@ public class NewsAdapter extends RecyclerView.Adapter {
         holder.position = i;
         DiaryNews diaryNews = newsList.get(i);
         holder.tvTitle.setText(diaryNews.getmTitle());
+        holder.ivTitle.setImageBitmap(diaryNews.getmBitmap());
     }
 
     class NewsViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
         public View rootView;
         public TextView tvTitle;
+        public ImageView ivTitle;
         public int position;
 
         public NewsViewHolder(View itemView) {
             super(itemView);
             rootView = itemView.findViewById(R.id.rootCardView);
             tvTitle = (TextView) itemView.findViewById(R.id.tvTitle);
+            ivTitle = (ImageView) itemView.findViewById(R.id.ivTitle);
 
             rootView.setOnClickListener(this);
             rootView.setOnLongClickListener(this);
@@ -84,7 +93,7 @@ public class NewsAdapter extends RecyclerView.Adapter {
             if (null != onRecyclerViewListener)
                 onRecyclerViewListener.onItemClick(position);
             else
-                Log.e("Faued", "no listener");
+                Log.e("Failed", "no listener");
         }
 
         @Override
